@@ -405,15 +405,16 @@ model class.
 **What the error distribution tells us.** The near-Gaussian,
 zero-centred ESOL residual (§4.2, $\sigma\approx0.61$) is informative
 beyond its RMSE. Because its spread is on the order of the experimental
-reproducibility of solubility assays, the model is operating close to
-the *label noise floor*: the remaining error is increasingly
-irreducible by modelling alone and would instead require higher-quality
-or more consistent measurements. This reframes the usual "make the
-model bigger" reflex --- for a mature benchmark such as ESOL, data
-quality, not model capacity, is the binding constraint. The mild
-negative-tail asymmetry (worst residual $-2.27$ vs.\ best $+1.46$)
-localises the residual risk to the sparsely sampled, very-insoluble
-extreme, exactly the region a practitioner should treat with caution.
+reproducibility of solubility assays, the model is approaching the
+scale of reported experimental variability: the remaining error is
+therefore unlikely to be removed by model changes alone and would
+increasingly require higher-quality or more consistent measurements.
+This reframes the usual "make the model bigger" reflex --- for a mature
+benchmark such as ESOL, data quality may be as important as model
+capacity. The mild negative-tail asymmetry (worst residual $-2.27$
+vs.\ best $+1.46$) localises the residual risk to the sparsely sampled,
+very-insoluble extreme, exactly the region a practitioner should treat
+with caution.
 
 **Learned vs. engineered representations.** Chemprop's advantage grows
 with dataset size and with the chemical complexity of the target. On
@@ -443,7 +444,7 @@ diagnostics of §4.1--4.2 rather than relying on any single scalar.
 **Practical recommendations.** From these results we distil three
 concrete guidelines for small-to-medium molecular-property studies:
 (i) always report a transparent descriptor baseline alongside the graph
-model，which both calibrates the gain and, through feature importance,
+model, which both calibrates the gain and, through feature importance,
 explains it; (ii) report a scaffold-split number and an error
 distribution, not only a random-split RMSE, because the optimism of
 random splits is property-dependent and not knowable a priori; and
@@ -502,8 +503,8 @@ DOI: 10.1021/acs.jcim.3c01250.
 Li, S.-C.; Manu, J.; Menon, A.; Pang, H.-W.; Wu, H.; Zalte, A. S.;
 Zheng, J. W.; Coley, C. W.; Green, W. H.; Greenman, K. P. *Chemprop v2:
 An Efficient, Modular Machine Learning Package for Chemical Property
-Prediction.* Journal of Chemical Information and Modeling, 2026.
-DOI: 10.1021/acs.jcim.5c02332.
+Prediction.* Journal of Chemical Information and Modeling, 2026, 66(1),
+28--33. DOI: 10.1021/acs.jcim.5c02332.
 
 [5] Wu, Z.; Ramsundar, B.; Feinberg, E. N.; Gomes, J.; Geniesse, C.;
 Pappu, A. S.; Leswing, K.; Pande, V. *MoleculeNet: A Benchmark for
